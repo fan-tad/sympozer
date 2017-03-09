@@ -1,0 +1,7 @@
+<h1>{{eventCategory.label}}</h1>
+<div class='action-links'>
+  <md-card *ngFor="let event of events | keys">
+    <a [routerLink]="['/event/'+event.value.name+'/'+event.value.id]">{{event.value.name}}</a>
+    <md-icon>trending_flat</md-icon>
+  </md-card>
+</div>
